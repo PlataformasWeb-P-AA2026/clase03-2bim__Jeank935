@@ -2,13 +2,17 @@ from django.db import models
 
 # Create your models here.
 class Pais(models.Model):
-    # nombre
-    # capital
-    # número de provincias
-    # número de habitantes
-    pass
+    nombre = models.CharField(max_length=30)
+    capital = models.CharField(max_length=30)
+    numeroProvincias = models.IntegerField()
+    numeroHabitantes = models.IntegerField()
+    
+    def __str__(self):
+        return f"{self.nombre}"
 
-
+# agregar pais al admin
+# irme al index de esto y listar paises
+# formulario
 class Estudiante(models.Model):
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
