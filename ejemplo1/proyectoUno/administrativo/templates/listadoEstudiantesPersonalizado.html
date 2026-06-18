@@ -5,16 +5,20 @@ Número de estudiantes {{ numero_estudiantes }}
 
 <ul>
 
-{% for e in estudiantes %}
+<!-- {% for e in estudiantes %}
 
   <li>{{e.id }} - {{e.nombre}} </li>
     {% for numero in e.mis_numeros_telefonicos.all %}
         
-          - telefonos{{numero.telefono}}<br/>
+          - telefonos {{numero.telefono}}<br/>
       
     {% endfor %}
-{% endfor %}
+{% endfor %} -->
+{% for e in estudiantes %}
 
+  <li>{{e.id }} - {{e.nombre}} -telefonos: {{e.obtener_cantidad_nt}} </li>
+    
+{% endfor %}
 </ul>
 
 <hr>
